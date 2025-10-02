@@ -1,5 +1,8 @@
 # Oracle of Suits
-This is the Oracle of Suits project of the [Master Media Design](https://www.hesge.ch/head/en/programs-research/master-arts-media-design), HEAD – Genève.
+This is the Oracle of Suits project of the [Master Media Design](https://www.hesge.ch/head/en/programs-research/master-arts-media-design), [HEAD – Genève](HEAD – Genève), [HES-SO](https://www.hes-so.ch/accueil) in collaboration with the [Musée suisse du jeu](https://museedujeu.ch/).
+
+## Goal
+We are designing embodied, playful, and accessible interactive experiences that tell the stories behind playing card suits for the Swiss Museum of Games.
 
 ## Students
 - [Zhanlan](https://github.com/orangespy-arts/head-md-oracle-of-suits)
