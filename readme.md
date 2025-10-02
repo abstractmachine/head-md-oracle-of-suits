@@ -11,3 +11,5 @@ This is the Oracle of Suits project of the [Master Media Design](https://www.hes
 - [Luca Correia da Rocha](https://github.com/LucaCDRocha/head-md-oracle-of-suits.git)
 - [Elena Gazzarrini](https://github.com/egazzarr/head-md-oracle-of-suits.git)
 - [Vincent Paley](https://github.com/Vinipae/head-md-oracle-of-suits)
+
+...
