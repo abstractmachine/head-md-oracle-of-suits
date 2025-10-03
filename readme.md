@@ -20,6 +20,6 @@ We are designing embodied, playful, and accessible interactive experiences that 
 - [Kostas](https://github.com/SevenBrezelos14/head-md-oracle-of-suits)
 - [Antony Neyret](https://github.com/antonynyt/head-md-oracle-of-suits)
 - [Maria Sarafi](https://github.com/mariasarafi/head-md-oracle-of-suits)
-- [Julia](https://github.com/js3000000/head-md-oracle-of-suits)
+- [Julia Sangnakkara](https://github.com/js3000000/head-md-oracle-of-suits)
 - [Ariadne Melissargos](https://github.com/ariameli/head-md-oracle-of-suits)
 - [Nicolas Grosfort](https://github.com/nicolasgrosfort/head-md-oracle-of-suits)
