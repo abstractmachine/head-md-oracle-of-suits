@@ -14,7 +14,7 @@
 - [Generative HUT](https://generativehut.myshopify.com); [A.R.E. Book](https://generativehut.myshopify.com/products/a-r-e-book-preorder). Vetro Editions, 2021.
 - [Generative HUT](https://generativehut.myshopify.com); [Tracing The Line](https://generativehut.myshopify.com/products/tracing-the-line). Vetro Editions, 2023.
 - Bohnacker, Hartmut; Gross, Benedikt; Laub, Julia & Lazzeroni, Claudius. *Generative Design: Visualize, Program, and Create with Processing.* Princeton Architectural Press, 2012.
-- Groß, Benedikt; Bohnacker, Hartmut; Laub, Julia & Lazzeroni, Claudius. *Generative Design: Visualize, Program, and Create with Javascript in p5.js (Revised and Updated Edition).* Princeton Architectural Press, 2018.
+- Groß, Benedikt; Bohnacker, Hartmut; Laub, Julia & Lazzeroni, Claudius. [Generative Design: Visualize, Program, and Create with Javascript in p5.js](http://www.generative-gestaltung.de/2/) (Revised and Updated Edition).* Princeton Architectural Press, 2018.
 - Hovestadt, Ludger; Hirschberg, Urs; Fritz, Oliver. [Atlas of Digital Architecture](https://www.atlasofdigitalarchitecture.com); Birkaüser. 2020.
 - Levin, Golan & Brain, Tega. *Code as Creative Medium: A Handbook for Computational Art and Design.* MIT Press, 2021.
 - Lieberman, Zach; Watson, Theo; Uwa, Rachel; Brain, Tega; et al. *ofBook: The Open Frameworks Community Book.* 2014. Cf. Levin, Golan, “Image Processing: Computer Vision.”
@@ -47,6 +47,7 @@
 ## Online Tutorials & Learning Resources
 - [https://processing.org/tutorials](https://processing.org/tutorials) - Processing tutorials
 - [https://p5js.org/learn](https://p5js.org/learn) - P5.js tutorials
+- [Creative Applications](https://www.creativeapplications.net)
 - [https://thecodingtrain.com](https://thecodingtrain.com) — Daniel Shiffman’s video lessons
 - [TRCC](https://timrodenbroeker.de) - Tim Rodenbröcker's creative coding online courses
 - [@timrodenbroeker](https://www.youtube.com/@timrodenbroeker) - Tim Rodenbröcker's YouTube Channel
