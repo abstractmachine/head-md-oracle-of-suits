@@ -6,7 +6,7 @@
 ## Overview
 This one-week intensive four-day workshop-within-a-workshop — *workshopception* — introduces the creative use of code for designing [interactive, gesture-based experiences](https://abstractmachine.net/tutorials). It takes place within the larger [Oracle of Suits](https://github.com/abstractmachine/head-md-oracle-of-suits) project and focuses on building a shared foundation for **real-time interaction**, **machine vision**, and **AI-assisted coding**.
 
-The week combines fundamentals of « creative coding » with hands-on prototyping using [P5.js](https://p5js.org/), [MediaPipe](https://developers.google.com/mediapipe), and [GitHub Copilot](https://docs.github.com/en/copilot).
+The week combines fundamentals of “creative coding” with hands-on prototyping using [P5.js](https://p5js.org/), [MediaPipe](https://developers.google.com/mediapipe), and [GitHub Copilot](https://docs.github.com/en/copilot).
 
 ## Goals
 
@@ -48,7 +48,17 @@ This is a general theoretical framework for the entire master’s programme, but
 
 Finally, we will lean heavily on using `git` commits for note-taking, and sharing code and demos with one another. Every student should feel comfortable by the end of the week pushing code up into their repository. We will project various student code repositories onto the room beamer so we can collectively comment, debug, and learn from each other.
 
-## Core Tools
+## Desired Outcomes
+
+By the end of the week, each participant (or small group) should be able to produce a **simple interactive prototype** that demonstrates:
+- a real-time gesture or motion-based input
+- clean, readable code that could be scaled or reused in future iterations of the *Oracle of Suits* project
+- the ability to collaborate with the `Copilot` robot
+- the ability to describe the core fundamentals of the code architecture
+
+This list might seem a tall ask, but given current student progress, it seems entirely achievable
+
+## Tools
 
 - [Git](https://en.wikipedia.org/wiki/Git)  
 - [GitHub](https://github.com)  
@@ -59,19 +69,15 @@ Finally, we will lean heavily on using `git` commits for note-taking, and sharin
 - [ml5.js](https://ml5js.org/) — optional machine learning layer for P5.js  
 - [Processing](https://processing.org/) — historical foundation of the P5.js framework
 
-## Setup
-Following the [Processing](http://processing.org) of creating a `setup()` function at the startup of a program, we have created a [setup.md](./setup.md) checklist for you to follow in order to get your environment setup correctly.
-
 ## Bibliography
 
 A starter [bibliography](./bibliography.md) has been created for students wanting to dig deeper into various subjects explored in this workshop-within-a-workshop.
 
-## Desired Outcomes
+## Setup
+Following the [Processing](http://processing.org) tradition of creating a `setup()` function at the startup of a program, we have created a [setup.md](./setup.md) checklist for you to follow in order to get your environment setup correctly.
 
-By the end of the week, each participant (or small group) should be able to produce a **simple interactive prototype** that demonstrates:
-- a real-time gesture or motion-based input  
-- a coherent visual or sonic response  
-- clean, readable code that could be scaled or reused in future iterations of the *Oracle of Suits* project  
-- the ability to describe the core fundamentals of the code architecture  
+## Talking To Robots
+Once you have set up your environment, a cheat sheet with tips on talking to robots — [hello-robot.md](./hello-robot.md) has been created for you to get you started working with your new robot ~~overlords~~ collaborators.
 
-This list might seem a tall ask, but given current student progress, it seems entirely achievable
+## Quickstart
+Code can be daunting. This is an extemely fast-ramp into the basics of writing a powerful P5.js program: [coding.md](./coding.md).

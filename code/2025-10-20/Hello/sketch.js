@@ -1,12 +1,13 @@
 function setup() {
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  diameter = dist(mouseX, mouseY, pmouseX, pmouseY);
-  circle(mouseX, mouseY, diameter);
+  line(pmouseX, pmouseY, mouseX, mouseY);
 }
 
+// clear the canvas when the mouse is pressed
 function mousePressed() {
-  background(255);
+  clear();
 }
+ 
