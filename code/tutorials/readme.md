@@ -86,3 +86,6 @@ Once you have set up your environment, a cheat sheet with tips on talking to rob
 
 ## Quickstart
 Code can be daunting. This is an extemely fast-ramp into the basics of writing a powerful P5.js program: [coding.md](./coding.md).
+
+## Media Pipe Demos
+[Pierre Rossel](https://github.com/prossel) has created a series of online interactive [P5.js + MediaPipe demos](https://prossel.github.io/Oracle-of-suits-demos/). You can find the source-code of his demos on his github repository [Oracle-of-suits-demos](https://github.com/prossel/Oracle-of-suits-demos).
