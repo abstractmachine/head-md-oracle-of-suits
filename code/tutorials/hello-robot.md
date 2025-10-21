@@ -1,4 +1,4 @@
-# Hello Robot
+# Hello Robot!
 It used to be a fantasy that one day we would be able to talk to robots in our own “natural language” — i.e. using imperfect, ambiguous, inaccurate human idioms — and the robots would do the hard part and translate our commands into the technical jargon that *just makes it #@§%$ work*. This used to be fantasy. Today it is — almost — our new reality. We are moving closer to a world where we can say:
 
 > Hey Robot, do thing.
@@ -7,12 +7,12 @@ And from the given context the robot will figure out what we mean by “thing”
 
 Almost.
 
-In other words… we’ll see…
+In other words… we’ll see… Strange times…
 
-So as this future shakes itself out, here are some **tips on how to talk to your AI large language model coding assistant**.
+But while this future shakes itself out, here are some **tips on how to talk to your AI large language model coding assistant**.
 
 ## Large Language Models
-Cf. presentation `grammar-attention-context.pdf` in Switch Drive.
+Cf. presentation `grammar-attention-context.pdf` in our class Switch Drive.
 
 ## Pelicans on Bicycles
 One important catch to our current predicament: we are not merely asking a robot to help us write code.  
@@ -110,6 +110,3 @@ function draw() {
 
 3. **If it makes things worse:**  
    Undo (`Cmd + Z`) and move on.
-
-Remember: you’re not “programming” anymore — you’re *negotiating with a machine intelligence.*  
-Be patient, be playful, and always keep one eye on the mystery of what it’s trying to say back.

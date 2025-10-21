@@ -1,13 +1,8 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(400,400);
+  
 }
 
 function draw() {
-  line(pmouseX, pmouseY, mouseX, mouseY);
+  background(220);
 }
-
-// clear the canvas when the mouse is pressed
-function mousePressed() {
-  clear();
-}
- 
