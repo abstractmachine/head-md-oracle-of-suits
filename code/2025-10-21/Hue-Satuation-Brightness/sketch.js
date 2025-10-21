@@ -10,7 +10,9 @@ function windowResized() {
 }
 
 function draw() {
-  background(220);
+  colorMode(HSB);
+  // gray background
+  background(75);
   // draw all the things
   for (let thing of things) {
     thing.draw();

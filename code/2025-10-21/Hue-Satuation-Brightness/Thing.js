@@ -6,7 +6,8 @@ class Thing {
         this.x = x;
         this.y = y;
         // random hue between 0 and 360
-        this.hue = random(0,360);
+        // but only 6 different values
+        this.hue = floor(random(6)) * 60;
         this.saturation = 100;
         this.brightness = 100;
     }
