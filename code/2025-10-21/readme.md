@@ -1,5 +1,5 @@
 # Goals
-Today's class will be focused on learning the core fundamentals of coding, and most importantly, on how to work with classes and objects.
+Today's class will be focused on learning the core fundamentals of coding, and most importantly, on how to work with classes and objects. We attempt to give meaning to [Julian Hepenhide](https://www.julian-h.de)'s injunction to not let the bots do all the cognitive and artistic work for you, all the while — let all the contradictions fly — leveraging the bots all the same.
 
 ## Quickstart
 - Create a folder with today's date
