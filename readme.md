@@ -5,7 +5,7 @@ This is the Oracle of Suits project of the [Master Media Design](https://www.hes
 We are designing embodied, playful, and accessible interactive experiences that tell the stories behind playing card suits for a future exhibition at the [Swiss Museum of Games](https://museedujeu.ch/).
 
 ## Tutorials
-There is a class on [Physical Computing](./code/tutorials/) that walks you through the process of setting up your development environment and learning to talk with robots.
+There is a class on [Physical Computing](./code/tutorials/readme.md) that walks you through the process of setting up your development environment and learning to talk with robots.
 
 ## Students
 - [Zhanlan](https://github.com/orangespy-arts/head-md-oracle-of-suits)
