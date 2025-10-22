@@ -4,6 +4,8 @@ Today's class will be focused on using everything we learned to (finally!) start
 ## Helper
 There is a new “helper” script that simplifies using the Google [Media Pipe Hands Landmark API](https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker).
 
+![Hand Demo](./Hands/images/hand-demo.png)
+
 ### Demos
 There are two demos using this helper:
 - [Hands](./Hands/)

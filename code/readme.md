@@ -13,3 +13,5 @@ We organize our coding sessions into “daily” folders in order to stay punk a
 
 ## Hand Landmark Demo
 There is a [Hand Landmarks demo](./2025-10-22/Hands/) demo showing how to use the Google Media Pipe API with P5.js.
+
+![Hand Demo](./2025-10-22/Hands/images/hand-demo.png)
