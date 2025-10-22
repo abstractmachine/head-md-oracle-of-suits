@@ -12,6 +12,6 @@ Download the [Hands demo release](https://github.com/abstractmachine/head-md-ora
 
 ## Create P5.js method
 - As before, use the standard `View` → `Command Palette` → `Create P5.js Project` method
-- Copy/paste [the code from the hands demo index.html](./Hands/index.html) your new `index.html`
-- Create a new file named `MediaPipeHands.js` and copy/paste [the code from the hands demo](./Hands/MediaPipeHands.js) into this new file
+- Copy/paste [the code from the hands demo index.html](./index.html) your new `index.html`
+- Create a new file named `MediaPipeHands.js` and copy/paste [the code from the hands demo](./MediaPipeHands.js) into this new file
 - Start working with your new `sketch.js`
