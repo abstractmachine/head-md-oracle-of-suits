@@ -16,7 +16,7 @@ You can download the `Hands` demo as a complete folder here:
 ### Quick & Dirty method
 Download the [Hands demo release](https://github.com/abstractmachine/head-md-oracle-of-suits/releases/latest) as a downloadable folder, rename this folder to whatever name you want, and place it in your daily folder.
 
-## Create P5.js method
+### Create P5.js method
 - As before, use the standard `View` → `Command Palette` → `Create P5.js Project` method
 - Copy/paste [the code from the hands demo index.html](./Hands/index.html) your new `index.html`
 - Create a new file named `MediaPipeHands.js` and copy/paste [the code from the hands demo](./Hands/MediaPipeHands.js) into this new file
