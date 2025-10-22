@@ -1,4 +1,3 @@
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   // setup MediaPipe Hands
@@ -35,5 +34,7 @@ function draw() {
       line(indexTip.x * videoElement.width, indexTip.y * videoElement.height,
            thumbTip.x * videoElement.width, thumbTip.y * videoElement.height);
     }
+
   }
+
 }
