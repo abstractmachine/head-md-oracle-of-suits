@@ -4,17 +4,17 @@ Today's class will be focused on using everything we learned to (finally!) start
 ## Helper
 There is a new “helper” script that simplifies using the Google [Media Pipe Hands Landmark API](https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker).
 
-### Release
-You can download this `Hands` demo as a complete folder here:
-- [MediaPipe Hands + P5.js Demo](https://github.com/abstractmachine/head-md-oracle-of-suits/releases/latest)
-
-## Demos
+### Demos
 There are two demos using this helper:
 - [Hands](./Hands/)
 - [Pinch](./Pinch/)
 
-## Quick & Dirty method
-Download the `Hands` demo, rename the folder name to whatever name you want, and place it in your daily folder.
+### Release
+You can download the `Hands` demo as a complete folder here:
+- [MediaPipe Hands + P5.js Demo](https://github.com/abstractmachine/head-md-oracle-of-suits/releases/latest)
+
+### Quick & Dirty method
+Download the [Hands demo release](https://github.com/abstractmachine/head-md-oracle-of-suits/releases/latest) as a downloadable folder, rename this folder to whatever name you want, and place it in your daily folder.
 
 ## Create P5.js method
 - As before, use the standard `View` → `Command Palette` → `Create P5.js Project` method

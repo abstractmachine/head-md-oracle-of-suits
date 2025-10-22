@@ -9,3 +9,7 @@ We organize our coding sessions into “daily” folders in order to stay punk a
 
 - [2025-10-20](./2025-10-20/)
 - [2025-10-21](./2025-10-21/)
+- [2025-10-22](./2025-10-22/)
+
+## Hand Landmark Demo
+There is a [Hand Landmarks demo](./2025-10-22/Hands/) demo showing how to use the Google Media Pipe API with P5.js.
