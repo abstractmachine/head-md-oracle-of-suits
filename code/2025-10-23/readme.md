@@ -13,3 +13,5 @@ In this demo you will see the results of two things:
 ## Face Landmark Detection
 Here is a link to the original Google [Face landmark detection guide](https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker#configurations_options).
 
+## Release
+You can download the release 

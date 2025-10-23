@@ -10,8 +10,16 @@ We organize our coding sessions into “daily” folders in order to stay punk a
 - [2025-10-20](./2025-10-20/)
 - [2025-10-21](./2025-10-21/)
 - [2025-10-22](./2025-10-22/)
+- [2025-10-23](./2025-10-23/)
 
 ## Hand Landmark Demo
-There is a [Hand Landmarks demo](./2025-10-22/Hands/) demo showing how to use the Google Media Pipe API with P5.js.
+There is a [Hand Landmarks demo](./2025-10-22/Hands/) demo showing how to use the [Google Media Pipe API](https://ai.google.dev/edge/mediapipe/solutions/guide) with [P5.js](https://p5js.org) to detect hands.
 
 ![Hand Demo](./2025-10-22/Hands/images/hand-demo.png)
+
+## Face Landmark + Blendshape Predition Demo
+There is a [Face Landmarks + Blendshape demo](./2025-10-23/Face/) demo show how to use the [Google Media Pipe API](https://ai.google.dev/edge/mediapipe/solutions/guide) with [P5.js](https://p5js.org) to detect faces.
+
+## Videos
+Here are some videos the students recorded of their experiments.
+
