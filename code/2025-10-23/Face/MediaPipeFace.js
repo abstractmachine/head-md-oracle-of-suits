@@ -327,22 +327,28 @@ function getFaceFeature(featureKeyOrIndices, faceIndex = 0, toPixels = true) {
 
 
 
+// ─────────────────────────────────────────────────────────────────────────────
+// FACE GEOMETRY HELPERS (no drawing)
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Return a list of edges ({a,b}) for a given connector key.
+ * Each edge has landmark objects as {a, b}, not pixel coords.
+ * Use markToPixel() in your sketch for rendering.
+ */
 function getFeatureEdges(landmarks, connectorKey) {
   const pairs = getFaceConnectors(connectorKey);
   if (!pairs) return [];
   const edges = [];
 
   for (const p of pairs) {
-    // support [a,b] and {start,end} shapes (keep simple — no fallbacks)
     let aIdx, bIdx;
     if (Array.isArray(p)) {
       aIdx = p[0]; bIdx = p[1];
     } else if (p && typeof p === 'object') {
       aIdx = p.start !== undefined ? p.start : p[0];
       bIdx = p.end !== undefined ? p.end : p[1];
-    } else {
-      continue;
-    }
+    } else continue;
 
     const a = landmarks[aIdx];
     const b = landmarks[bIdx];
@@ -352,6 +358,115 @@ function getFeatureEdges(landmarks, connectorKey) {
   }
   return edges;
 }
+
+
+/**
+ * Build ordered rings (polygons) from a MediaPipe connector graph.
+ * Returns an array of rings; each ring is an array of landmarks (in order).
+ *
+ * Example:
+ *   const rings = getFeatureRings('FACE_LANDMARKS_LIPS');
+ *   // rings[0] is the outer lip, rings[1] is the inner lip hole
+ */
+function getFeatureRings(featureKey, faceIndex = 0, toPixels = true) {
+  const connectors = getFaceConnectors(featureKey);
+  if (!connectors || !connectors.length) return null;
+
+  const faces = getFaceLandmarks();
+  if (!faces || faces.length <= faceIndex) return null;
+  const landmarks = faces[faceIndex];
+
+  // 1) Build UNDIRECTED adjacency: u <-> v
+  const adj = new Map(); // idx -> Set(neighbors)
+  const add = (u, v) => {
+    if (!adj.has(u)) adj.set(u, new Set());
+    if (!adj.has(v)) adj.set(v, new Set());
+    adj.get(u).add(v);
+    adj.get(v).add(u);
+  };
+
+  for (const e of connectors) {
+    if (Array.isArray(e) && e.length >= 2) add(e[0], e[1]);
+    else if (e && typeof e.start === 'number' && typeof e.end === 'number') add(e.start, e.end);
+  }
+  if (adj.size === 0) return null;
+
+  // 2) Walk cycles in each connected component
+  const visited = new Set();
+  const ringsIdx = [];
+
+  const walkCycleFrom = (start) => {
+    // pick an arbitrary neighbor to start the direction
+    const nbs = Array.from(adj.get(start) || []);
+    if (nbs.length === 0) return null;
+    let prev = start;
+    let cur = nbs[0];
+    const ring = [start];
+
+    // mark start as visited for this ring
+    visited.add(start);
+
+    // walk until we return to start or get stuck
+    while (true) {
+      ring.push(cur);
+      visited.add(cur);
+      const neighbors = Array.from(adj.get(cur) || []);
+      // choose the neighbor that is NOT the previous node
+      const next = neighbors.find(x => x !== prev);
+      if (next === undefined) break;           // dead end (shouldn't happen on proper loops)
+      if (next === start) {                    // closed loop
+        ringsIdx.push(ring);
+        return true;
+      }
+      prev = cur;
+      cur = next;
+      if (ring.length > 2000) break;           // safety
+    }
+    return false;
+  };
+
+  // process all components
+  for (const node of adj.keys()) {
+    if (visited.has(node)) continue;
+    // Try to start from a degree-2 node (prefer closed-loop behavior)
+    const deg = (i) => (adj.get(i) ? adj.get(i).size : 0);
+    let start = node;
+    if (deg(node) !== 2) {
+      // search a degree-2 node in this component
+      const stack = [node];
+      const seen = new Set([node]);
+      let found = null;
+      while (stack.length) {
+        const u = stack.pop();
+        if (deg(u) === 2) { found = u; break; }
+        for (const v of adj.get(u) || []) if (!seen.has(v)) { seen.add(v); stack.push(v); }
+      }
+      if (found != null) start = found;
+    }
+    walkCycleFrom(start);
+  }
+
+  // 3) Map indices -> points (pixels or raw landmarks)
+  const ringsPts = ringsIdx.map(ring => ring.map(idx => {
+    const lm = landmarks[idx];
+    return toPixels ? markToPixel(lm, videoElement.width, videoElement.height) : lm;
+  })).filter(r => r && r.length);
+
+  return ringsPts.length ? ringsPts : null;
+}
+
+/**
+ * Return only the outer ring (first ring) for a given feature.
+ */
+function getFeatureOuterRing(featureKey, faceIndex = 0, toPixels = true) {
+  const rings = getFeatureRings(featureKey, faceIndex, toPixels);
+  return rings ? rings[0] : null;
+}
+
+// expose to window
+window.getFeatureEdges = getFeatureEdges;
+window.getFeatureRings = getFeatureRings;
+window.getFeatureOuterRing = getFeatureOuterRing;
 
 
 
@@ -463,8 +578,6 @@ window.getFaceBlendshapes = getFaceBlendshapes;
 window.getBlendshapeList = getBlendshapeList;
 window.getBlendshapeScore = getBlendshapeScore;
 
-
-
 // Debug helpers for console
 function listFaceModelConstants() {
   const FaceClass = window.face && window.face.constructor;
@@ -475,6 +588,7 @@ function getFaceModelConstant(name) {
   const FaceClass = window.face && window.face.constructor;
   return (FaceClass && FaceClass[name]) || null;
 }
+
 window.listFaceModelConstants = listFaceModelConstants;
 window.getFaceModelConstant = getFaceModelConstant;
 

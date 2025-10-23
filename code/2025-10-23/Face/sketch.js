@@ -40,103 +40,122 @@ function draw() {
     drawMouth(faces[0]);
   }
 
+  // draw blendshape values
+  drawBlendshapeScores();
+
+}
+
+function drawBlendshapeScores() {
   fill(255);
   noStroke();
   textSize(16);
   text("leftEyeBlink: " + leftEyeBlink.toFixed(2), 10, height - 60);
   text("rightEyeBlink: " + rightEyeBlink.toFixed(2), 10, height - 40);
   text("jawOpen: " + jawOpen.toFixed(2), 10, height - 20);
-
 }
 
 
-function drawEyes(landmarks) {
+function drawEyes() {
 
-  // see features.txt for full list of possible features
-  let leftEyeEdges = getFeatureEdges(landmarks, 'FACE_LANDMARKS_LEFT_EYE');
-  let leftIrisEdges = getFeatureEdges(landmarks, 'FACE_LANDMARKS_LEFT_IRIS');
-  let rightEyeEdges = getFeatureEdges(landmarks, 'FACE_LANDMARKS_RIGHT_EYE');
-  let rightIrisEdges = getFeatureEdges(landmarks, 'FACE_LANDMARKS_RIGHT_IRIS');
+  // ordered rings (outer loop first) from the helper
+  const leftEye = getFeatureRings('FACE_LANDMARKS_LEFT_EYE');
+  const rightEye = getFeatureRings('FACE_LANDMARKS_RIGHT_EYE');
+  const leftIris = getFeatureRings('FACE_LANDMARKS_LEFT_IRIS');
+  const rightIris = getFeatureRings('FACE_LANDMARKS_RIGHT_IRIS');
 
-  if (leftEyeEdges.length === 0 || rightEyeEdges.length === 0) return;
+  if (!leftEye || !rightEye) return;
 
-  // fill left eye area
+  // --- outline the sockets (no fill) ---
+  noFill();
   stroke(255, 255, 0);
   strokeWeight(1);
-  noFill();
+
+  // left eye outline
   beginShape();
-  for (const edge of leftEyeEdges) {
-    const p = markToPixel(edge.a, videoElement.width, videoElement.height);
-    if (p) {
-      vertex(p.x, p.y);
-    }
+  for (let p of leftEye[0]) {
+    vertex(p.x, p.y);
   }
   endShape(CLOSE);
 
-  // if left eye is NOT blinking, fill it
-  noStroke();
-  fill(0, 255, 0);
+  // right eye outline
+  beginShape();
+  for (let p of rightEye[0]) {
+    vertex(p.x, p.y);
+  }
+  endShape(CLOSE);
+
+  // fill the irises only if the eyes aren’t blinking
   if (leftEyeBlink < 0.5) {
+    noStroke();
+    fill(0, 255, 0); // left
     beginShape();
-    for (const edge of leftIrisEdges) {
-      const p = markToPixel(edge.a, videoElement.width, videoElement.height);
-      if (p) {
-        vertex(p.x, p.y);
-      }
+    for (let p of leftIris[0]) {
+      vertex(p.x, p.y);
     }
     endShape(CLOSE);
   }
 
   if (rightEyeBlink < 0.5) {
-    // if right eye is NOT blinking, fill it
     noStroke();
-    fill(0, 0, 255);
+    fill(0, 0, 255); // right
     beginShape();
-    for (const edge of rightIrisEdges) {
-      const p = markToPixel(edge.a, videoElement.width, videoElement.height);
-      if (p) {
-        vertex(p.x, p.y);
-      }
+    for (let p of rightIris[0]) {
+      vertex(p.x, p.y);
     }
     endShape(CLOSE);
   }
-
-  // fill right eye area
-  stroke(255, 255, 0);
-  strokeWeight(1);
-  noFill();
-  beginShape();
-  for (const edge of rightEyeEdges) {
-    const p = markToPixel(edge.a, videoElement.width, videoElement.height);
-    if (p) {
-      vertex(p.x, p.y);
-    }
-  }
-  endShape(CLOSE);
-
 }
 
-function drawMouth(landmarks) {
 
-  let mouthEdges = getFeatureEdges(landmarks, 'FACE_LANDMARKS_LIPS');
 
-  if (mouthEdges.length === 0) return;
+function drawMouth() {
 
+  let mouth = getFeatureRings('FACE_LANDMARKS_LIPS');
+  // make sure we have mouth data
+  if (!mouth) return;
+
+  // set fill and stroke based on jawOpen value
   if (jawOpen > 0.5) {
-    fill(255, 0, 255);
+    fill(0, 255, 255, 64);
+    stroke(0, 255, 255);
   } else {
-    noFill();
+    fill(255, 255, 0, 64);
+    stroke(255, 255, 0);
   }
 
-  // fill mouth area
-  stroke(255, 255, 0);
-  strokeWeight(1);
+  // there are two rings: outer lip and inner lip
+  let outerLip = mouth[0];
+  let innerLip = mouth[1];
+
+  // draw outer lip
   beginShape();
-  for (const edge of mouthEdges) {
-    const p = markToPixel(edge.a, videoElement.width, videoElement.height);
-    if (p) {
-      vertex(p.x, p.y);
-    }
+  for (const p of outerLip) {
+    vertex(p.x, p.y);
+  }
+
+  // draw inner lip as a hole
+  beginContour();
+  // we need to go backwards around the inner lip
+  for (let j = innerLip.length - 1; j >= 0; j--) {
+    const p = innerLip[j];
+    vertex(p.x, p.y);
+  }
+  endContour();
+  endShape(CLOSE);
+
+  // if jaw is open
+  if (jawOpen > 0.5) {
+    // fuchsia fill
+    fill(255, 0, 255);
+  } else {
+    // yellow fill
+    fill(255, 255, 0);
+  }
+
+  // fill inner mouth
+  beginShape();
+  for (const p of innerLip) {
+    vertex(p.x, p.y);
   }
   endShape(CLOSE);
 
