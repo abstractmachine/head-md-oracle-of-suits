@@ -48,10 +48,10 @@ function draw() {
 function drawBlendshapeScores() {
   fill(255);
   noStroke();
-  textSize(16);
-  text("leftEyeBlink: " + leftEyeBlink.toFixed(2), 10, height - 60);
-  text("rightEyeBlink: " + rightEyeBlink.toFixed(2), 10, height - 40);
-  text("jawOpen: " + jawOpen.toFixed(2), 10, height - 20);
+  textSize(48);
+  text("leftEyeBlink: " + leftEyeBlink.toFixed(2), 10, height - 150);
+  text("rightEyeBlink: " + rightEyeBlink.toFixed(2), 10, height - 100);
+  text("jawOpen: " + jawOpen.toFixed(2), 10, height - 50);
 }
 
 
@@ -116,9 +116,11 @@ function drawMouth() {
 
   // set fill and stroke based on jawOpen value
   if (jawOpen > 0.5) {
+    // fuchsia fill with some transparency
     fill(0, 255, 255, 64);
     stroke(0, 255, 255);
   } else {
+    // yellow fill with some transparency
     fill(255, 255, 0, 64);
     stroke(255, 255, 0);
   }
