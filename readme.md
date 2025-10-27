@@ -7,6 +7,16 @@ We are designing embodied, playful, and accessible interactive experiences that 
 ## Tutorials
 There is a class on [Physical Computing](./code/tutorials/readme.md) that walks you through the process of setting up your development environment and learning to talk with robots.
 
+## Concepts
+- [Touching Sounds](https://github.com/egazzarr/head-md-oracle-of-suits/tree/main/concept)
+- [Hybrids](https://github.com/LucaCDRocha/head-md-oracle-of-suits)
+- [Time Machine](https://github.com/badjen221/head-md-oracle-of-suits)
+- [Suitscapes](https://github.com/mariasarafi/head-md-oracle-of-suits)
+- [The Naked Card](https://github.com/lisagrd12/head-md-oracle-of-suits)
+- [Moustache](https://github.com/AlirezaAsna/head-md-oracle-of-suits)
+- [Personalisation](https://github.com/mynameiszainabouriachi-stack/head-md-oracle-of-suits)
+- [Anachrony](https://github.com/nicolasgrosfort/head-md-oracle-of-suits/tree/main/process/concepts)
+
 ## Students
 - [Zhanlan](https://github.com/orangespy-arts/head-md-oracle-of-suits)
 - [Lisa Giraud](https://github.com/lisagrd12/head-md-oracle-of-suits)
