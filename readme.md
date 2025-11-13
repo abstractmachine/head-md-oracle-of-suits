@@ -15,7 +15,7 @@ There is a class on [Physical Computing](./code/tutorials/readme.md) that walks 
 - [The Mustache](https://github.com/AlirezaAsna/head-md-oracle-of-suits/tree/main/press%20kit)
 - [The Naked Card](https://github.com/ariameli/head-md-oracle-of-suits/tree/main/presskit)
 - [Sleeping Card](https://github.com/mynameiszainabouriachi-stack/head-md-oracle-of-suits/tree/main/presskit)
-- [Suitscapes](https://github.com/mariasarafi/head-md-oracle-of-suits/blob/main/Press%20Kit/251113_HEAD-MD1_Oracle-of-Suits_Maria_Kostas_Suitscapes.pdf)
+- [Suitscapes](https://github.com/mariasarafi/head-md-oracle-of-suits/blob/main/Press%20Kit)
 - [Touching Sounds](https://github.com/imgoldkim/head-md-oracle-of-suits/tree/main/Presskit)
 
 ## Concepts
