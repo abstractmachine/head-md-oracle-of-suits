@@ -7,15 +7,27 @@ We are designing embodied, playful, and accessible interactive experiences that 
 ## Tutorials
 There is a class on [Physical Computing](./code/tutorials/readme.md) that walks you through the process of setting up your development environment and learning to talk with robots.
 
+## Presskits
+- [Anachrony](https://github.com/nicolasgrosfort/head-md-oracle-of-suits/tree/main/press-kit)
+- [Chronocards](https://github.com/js3000000/head-md-oracle-of-suits/tree/main/Press%20Kit)
+- [Hybrids](https://github.com/LucaCDRocha/head-md-oracle-of-suits/tree/main/presskit)
+- [Magic Mirror](https://github.com/MiaozhengQ/head-md-oracle-of-suits/tree/main/press%20kit)
+- [The Mustache](https://github.com/AlirezaAsna/head-md-oracle-of-suits/tree/main/press%20kit)
+- [The Naked Card](https://github.com/ariameli/head-md-oracle-of-suits/tree/main/presskit)
+- [Sleeping Card](https://github.com/mynameiszainabouriachi-stack/head-md-oracle-of-suits/tree/main/presskit)
+- [Suitscapes](https://github.com/mariasarafi/head-md-oracle-of-suits/blob/main/Press%20Kit/251113_HEAD-MD1_Oracle-of-Suits_Maria_Kostas_Suitscapes.pdf)
+- [Touching Sounds](https://github.com/imgoldkim/head-md-oracle-of-suits/tree/main/Presskit)
+
 ## Concepts
-- [Touching Sounds](https://github.com/egazzarr/head-md-oracle-of-suits/tree/main/concept)
+- [Anachrony](https://github.com/nicolasgrosfort/head-md-oracle-of-suits)
+- [Chronocards](https://github.com/badjen221/head-md-oracle-of-suits)
 - [Hybrids](https://github.com/LucaCDRocha/head-md-oracle-of-suits)
-- [Time Machine](https://github.com/badjen221/head-md-oracle-of-suits)
-- [Suitscapes](https://github.com/mariasarafi/head-md-oracle-of-suits)
-- [The Naked Card](https://github.com/lisagrd12/head-md-oracle-of-suits)
+- [Magic Mirror](https://github.com/MiaozhengQ/head-md-oracle-of-suits)
 - [Moustache](https://github.com/AlirezaAsna/head-md-oracle-of-suits)
-- [Personalisation](https://github.com/mynameiszainabouriachi-stack/head-md-oracle-of-suits)
-- [Anachrony](https://github.com/nicolasgrosfort/head-md-oracle-of-suits/tree/main/process/concepts)
+- [The Naked Card](https://github.com/lisagrd12/head-md-oracle-of-suits)
+- [The Sleeping Card](https://github.com/mynameiszainabouriachi-stack/head-md-oracle-of-suits)
+- [Suitscapes](https://github.com/mariasarafi/head-md-oracle-of-suits)
+- [Touching Sounds](https://github.com/egazzarr/head-md-oracle-of-suits)
 
 ## Students
 - [Zhanlan](https://github.com/orangespy-arts/head-md-oracle-of-suits)
