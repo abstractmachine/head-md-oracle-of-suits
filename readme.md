@@ -7,6 +7,10 @@ We are designing embodied, playful, and accessible interactive experiences that 
 ## Tutorials
 There is a class on [Physical Computing](./code/tutorials/readme.md) that walks you through the process of setting up your development environment and learning to talk with robots.
 
+## Project
+You can download a PDF document containing all projects from this workshop: [HEAD_Media-Design_Oracle-of-Suits-2025-11-14.pdf
+](https://github.com/abstractmachine/head-md-oracle-of-suits/releases/tag/document-v1.0)
+
 ## Presskits
 - [Anachrony](https://github.com/nicolasgrosfort/head-md-oracle-of-suits/tree/main/press-kit)
 - [Chronocards](https://github.com/js3000000/head-md-oracle-of-suits/tree/main/Press%20Kit)
